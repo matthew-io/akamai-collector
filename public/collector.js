@@ -982,7 +982,7 @@ function run() {
       "<html> <head> </head> <body> <h1>Successfully collected data, thank you!</h1> </body> </html>"
     );
     document.close();
-    return fetch("http://localhost:3000/devices", {
+    return fetch(__dirname + "/devices", {
       method: "POST",
 
       headers: {
