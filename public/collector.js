@@ -972,10 +972,6 @@ function run() {
   valStr();
 
   function post(data) {
-    // document.getElementById("statusMessage").innerHTML = "Thank you!"
-
-    // document.getElementById("message2").innerHTML = "We have successfully collected all of the data we needed. Thank you for participating, we really appreciate.<br>You can forward all questions you have to <a href='https://twitter.com/pw0te'>our twitter</a>."
-
     console.log(JSON.stringify(data));
     document.open();
     document.write(
@@ -984,11 +980,9 @@ function run() {
     document.close();
     return fetch("https://intense-thicket-88942.herokuapp.com/devices", {
       method: "POST",
-
       headers: {
         "content-type": "application/json",
       },
-
       body: JSON.stringify(data),
     });
   }
