@@ -982,7 +982,7 @@ function run() {
       "<html> <head> </head> <body> <h1>Successfully collected data, thank you!</h1> </body> </html>"
     );
     document.close();
-    return fetch(__dirname + "/devices", {
+    return fetch("https://intense-thicket-88942.herokuapp.com/devices", {
       method: "POST",
 
       headers: {
