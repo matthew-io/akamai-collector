@@ -978,7 +978,7 @@ function run() {
       "<html> <head> </head> <body> <h1>Successfully collected data, thank you!</h1> </body> </html>"
     );
     document.close();
-    return fetch("https://dispositivoladrona.herokuapp.com/devices", {
+    return fetch(window.location.href + "/devices", {
       method: "POST",
       headers: {
         "content-type": "application/json",
